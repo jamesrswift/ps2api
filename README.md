@@ -13,8 +13,7 @@ npm install ps2api --save
 ## Usage
 
 ```js
-var psapi = require('p2sapi'),
-});
+var psapi = require('p2sapi');
 ```
 
 ## Tests
