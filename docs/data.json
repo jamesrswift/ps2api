@@ -314,7 +314,29 @@
         },
         {
             "file": "lib\\Connection.js",
-            "line": 49,
+            "line": 47,
+            "description": "Table of users retrieved from the connection",
+            "itemtype": "property",
+            "name": "Users",
+            "type": "Object",
+            "class": "Connection",
+            "module": "ps2api",
+            "submodule": "ps2api-connection"
+        },
+        {
+            "file": "lib\\Connection.js",
+            "line": 55,
+            "description": "Table of Items retrieved from the connection",
+            "itemtype": "property",
+            "name": "Items",
+            "type": "Object",
+            "class": "Connection",
+            "module": "ps2api",
+            "submodule": "ps2api-connection"
+        },
+        {
+            "file": "lib\\Connection.js",
+            "line": 63,
             "description": "The MySQL connection used by the connection class",
             "itemtype": "property",
             "name": "Connection",
@@ -325,7 +347,7 @@
         },
         {
             "file": "lib\\Connection.js",
-            "line": 66,
+            "line": 80,
             "description": "Fired when the connection class connects to the database",
             "itemtype": "event",
             "name": "connected",
@@ -335,7 +357,7 @@
         },
         {
             "file": "lib\\Connection.js",
-            "line": 78,
+            "line": 92,
             "description": "Manages errors thrown by the connection",
             "itemtype": "method",
             "name": "onError",
@@ -348,7 +370,7 @@
         },
         {
             "file": "lib\\Connection.js",
-            "line": 85,
+            "line": 99,
             "description": "Fired when the connection fails",
             "itemtype": "event",
             "name": "error",
@@ -365,7 +387,7 @@
         },
         {
             "file": "lib\\Connection.js",
-            "line": 96,
+            "line": 110,
             "description": "Loads the users from the database",
             "itemtype": "method",
             "name": "loadUsers",
@@ -385,7 +407,28 @@
         },
         {
             "file": "lib\\Connection.js",
-            "line": 128,
+            "line": 142,
+            "description": "Gets a user that has been loaded from the database",
+            "itemtype": "method",
+            "name": "getUser",
+            "params": [
+                {
+                    "name": "SteamID64",
+                    "description": "The 64 bit representation of the Steam ID of the user to be retrieved",
+                    "type": "Integer"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "User"
+            },
+            "class": "Connection",
+            "module": "ps2api",
+            "submodule": "ps2api-connection"
+        },
+        {
+            "file": "lib\\Connection.js",
+            "line": 153,
             "description": "Loads the items from the database",
             "itemtype": "method",
             "name": "loadItems",
@@ -393,6 +436,57 @@
                 {
                     "name": "Callback",
                     "description": "Called when query has finished",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Connection",
+            "module": "ps2api",
+            "submodule": "ps2api-connection"
+        },
+        {
+            "file": "lib\\Connection.js",
+            "line": 182,
+            "description": "Gets an item that has been loaded from the database",
+            "itemtype": "method",
+            "name": "getItem",
+            "params": [
+                {
+                    "name": "itemName",
+                    "description": "The name of the item to be given",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "User"
+            },
+            "class": "Connection",
+            "module": "ps2api",
+            "submodule": "ps2api-connection"
+        },
+        {
+            "file": "lib\\Connection.js",
+            "line": 193,
+            "description": "Gives an item to a user",
+            "itemtype": "method",
+            "name": "giveItem",
+            "params": [
+                {
+                    "name": "User",
+                    "description": "User to give the item to",
+                    "type": "User"
+                },
+                {
+                    "name": "Item",
+                    "description": "User to be given",
+                    "type": "Item"
+                },
+                {
+                    "name": "Callback",
+                    "description": "Called when the query has finished",
                     "type": "Function"
                 }
             ],
@@ -418,11 +512,158 @@
             "module": "ps2api"
         },
         {
+            "file": "lib\\Item.js",
+            "line": 33,
+            "description": "Name of the item",
+            "itemtype": "property",
+            "name": "name",
+            "type": "string",
+            "class": "Item",
+            "module": "ps2api",
+            "submodule": "ps2api-item"
+        },
+        {
+            "file": "lib\\Item.js",
+            "line": 41,
+            "description": "Description of the item",
+            "itemtype": "property",
+            "name": "description",
+            "type": "string",
+            "class": "Item",
+            "module": "ps2api",
+            "submodule": "ps2api-item"
+        },
+        {
+            "file": "lib\\Item.js",
+            "line": 49,
+            "description": "ID of the item",
+            "itemtype": "property",
+            "name": "id",
+            "type": "integer",
+            "class": "Item",
+            "module": "ps2api",
+            "submodule": "ps2api-item"
+        },
+        {
+            "file": "lib\\Item.js",
+            "line": 58,
+            "description": "Value used by pointshop 2 to determine the class of the item",
+            "itemtype": "property",
+            "name": "itemClass",
+            "type": "string",
+            "class": "Item",
+            "module": "ps2api",
+            "submodule": "ps2api-item"
+        },
+        {
+            "file": "lib\\Item.js",
+            "line": 68,
+            "description": "Value used by pointshop 2 to determine the purchase data of the item",
+            "itemtype": "property",
+            "name": "purchaseData",
+            "type": "string",
+            "class": "Item",
+            "module": "ps2api",
+            "submodule": "ps2api-item"
+        },
+        {
             "file": "lib\\User.js",
             "line": 1,
             "description": "PS2API\nhttps://github.com/JamesxX/ps2api\n\nCopyright (c) 2016 James R Swift\nLicensed under the GNU GPLv3 license.",
             "class": "User",
             "module": "ps2api"
+        },
+        {
+            "file": "lib\\User.js",
+            "line": 36,
+            "description": "Player variable",
+            "itemtype": "property",
+            "name": "player",
+            "type": "string",
+            "class": "User",
+            "module": "ps2api",
+            "submodule": "ps2api-user"
+        },
+        {
+            "file": "lib\\User.js",
+            "line": 44,
+            "description": "Name of the user",
+            "itemtype": "property",
+            "name": "name",
+            "type": "string",
+            "class": "User",
+            "module": "ps2api",
+            "submodule": "ps2api-user"
+        },
+        {
+            "file": "lib\\User.js",
+            "line": 52,
+            "description": "UniqueID of the user",
+            "itemtype": "property",
+            "name": "uniqueid",
+            "type": "integer",
+            "class": "User",
+            "module": "ps2api",
+            "submodule": "ps2api-user"
+        },
+        {
+            "file": "lib\\User.js",
+            "line": 60,
+            "description": "SteamID64 of the user",
+            "itemtype": "property",
+            "name": "steam64",
+            "type": "integer",
+            "class": "User",
+            "module": "ps2api",
+            "submodule": "ps2api-user"
+        },
+        {
+            "file": "lib\\User.js",
+            "line": 68,
+            "description": "Inventory ID of the user",
+            "itemtype": "property",
+            "name": "invid",
+            "type": "integer",
+            "class": "User",
+            "module": "ps2api",
+            "submodule": "ps2api-user"
+        },
+        {
+            "file": "lib\\User.js",
+            "line": 76,
+            "description": "Parent Connection class of User object",
+            "itemtype": "property",
+            "name": "parent",
+            "type": "Connection",
+            "class": "User",
+            "module": "ps2api",
+            "submodule": "ps2api-user"
+        },
+        {
+            "file": "lib\\User.js",
+            "line": 85,
+            "description": "Gives an item to the user by name of the item",
+            "itemtype": "method",
+            "name": "giveItem",
+            "params": [
+                {
+                    "name": "ItemName",
+                    "description": "Item to be given",
+                    "type": "String"
+                },
+                {
+                    "name": "Callback",
+                    "description": "Called when the query has finished",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "Returns false if the item doesn't exist",
+                "type": "Boolean"
+            },
+            "class": "User",
+            "module": "ps2api",
+            "submodule": "ps2api-user"
         },
         {
             "file": "index.js",

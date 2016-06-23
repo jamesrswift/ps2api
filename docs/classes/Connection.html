@@ -221,6 +221,18 @@ Node JS and the MySQL database</p>
 
                     <ul class="index-list methods">
                             <li class="index-item method">
+                                <a href="#method_getItem">getItem</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_getUser">getUser</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_giveItem">giveItem</a>
+
+                            </li>
+                            <li class="index-item method">
                                 <a href="#method_loadItems">loadItems</a>
 
                             </li>
@@ -247,6 +259,14 @@ Node JS and the MySQL database</p>
                                 <a href="#property_Event">Event</a>
 
                             </li>
+                            <li class="index-item property">
+                                <a href="#property_Items">Items</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_Users">Users</a>
+
+                            </li>
                     </ul>
                 </div>
 
@@ -270,6 +290,225 @@ Node JS and the MySQL database</p>
             <div id="methods" class="api-class-tabpanel">
                 <h2 class="off-left">Methods</h2>
 
+<div id="method_getItem" class="method item">
+    <h3 class="name"><code>getItem</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>itemName</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/User.html" class="crosslink">User</a></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/lib_Connection.js.html#l182"><code>lib\Connection.js:182</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Gets an item that has been loaded from the database</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">itemName</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>The name of the item to be given</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="../classes/User.html" class="crosslink">User</a></span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_getUser" class="method item">
+    <h3 class="name"><code>getUser</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>SteamID64</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/User.html" class="crosslink">User</a></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/lib_Connection.js.html#l142"><code>lib\Connection.js:142</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Gets a user that has been loaded from the database</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">SteamID64</code>
+                        <span class="type">Integer</span>
+
+
+                    <div class="param-description">
+                        <p>The 64 bit representation of the Steam ID of the user to be retrieved</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="../classes/User.html" class="crosslink">User</a></span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_giveItem" class="method item">
+    <h3 class="name"><code>giveItem</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>User</code>
+                </li>
+                <li class="arg">
+                        <code>Item</code>
+                </li>
+                <li class="arg">
+                        <code>Callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/lib_Connection.js.html#l193"><code>lib\Connection.js:193</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Gives an item to a user</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">User</code>
+                        <span class="type"><a href="../classes/User.html" class="crosslink">User</a></span>
+
+
+                    <div class="param-description">
+                        <p>User to give the item to</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">Item</code>
+                        <span class="type"><a href="../classes/Item.html" class="crosslink">Item</a></span>
+
+
+                    <div class="param-description">
+                        <p>User to be given</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">Callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>Called when the query has finished</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+            </div>
+        </div>
+
+
+</div>
 <div id="method_loadItems" class="method item">
     <h3 class="name"><code>loadItems</code></h3>
 
@@ -294,7 +533,7 @@ Node JS and the MySQL database</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/lib_Connection.js.html#l128"><code>lib\Connection.js:128</code></a>
+        <a href="../files/lib_Connection.js.html#l153"><code>lib\Connection.js:153</code></a>
         </p>
 
 
@@ -357,7 +596,7 @@ Node JS and the MySQL database</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/lib_Connection.js.html#l96"><code>lib\Connection.js:96</code></a>
+        <a href="../files/lib_Connection.js.html#l110"><code>lib\Connection.js:110</code></a>
         </p>
 
 
@@ -414,7 +653,7 @@ Node JS and the MySQL database</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/lib_Connection.js.html#l78"><code>lib\Connection.js:78</code></a>
+        <a href="../files/lib_Connection.js.html#l92"><code>lib\Connection.js:92</code></a>
         </p>
 
 
@@ -452,7 +691,7 @@ Node JS and the MySQL database</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/lib_Connection.js.html#l49"><code>lib\Connection.js:49</code></a>
+        <a href="../files/lib_Connection.js.html#l63"><code>lib\Connection.js:63</code></a>
         </p>
 
 
@@ -491,6 +730,56 @@ Node JS and the MySQL database</p>
 
 
 </div>
+<div id="property_Items" class="property item">
+    <h3 class="name"><code>Items</code></h3>
+    <span class="type">Object</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/lib_Connection.js.html#l55"><code>lib\Connection.js:55</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Table of Items retrieved from the connection</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_Users" class="property item">
+    <h3 class="name"><code>Users</code></h3>
+    <span class="type">Object</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/lib_Connection.js.html#l47"><code>lib\Connection.js:47</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Table of users retrieved from the connection</p>
+
+    </div>
+
+
+
+</div>
             </div>
 
 
@@ -508,7 +797,7 @@ Node JS and the MySQL database</p>
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/lib_Connection.js.html#l66"><code>lib\Connection.js:66</code></a>
+                            <a href="../files/lib_Connection.js.html#l80"><code>lib\Connection.js:80</code></a>
                             </p>
                     
                     
@@ -533,7 +822,7 @@ Node JS and the MySQL database</p>
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/lib_Connection.js.html#l85"><code>lib\Connection.js:85</code></a>
+                            <a href="../files/lib_Connection.js.html#l99"><code>lib\Connection.js:99</code></a>
                             </p>
                     
                     

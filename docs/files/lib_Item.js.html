@@ -119,9 +119,57 @@
 class Item{
 	
 	constructor( name, description, id){
+		
+/**
+ * Name of the item
+ *
+ * @property name
+ * @type string
+ */
 		this.name = name;
+		
+/**
+ * Description of the item
+ *
+ * @property description
+ * @type string
+ */
 		this.description = description;
+		
+/**
+ * ID of the item
+ *
+ * @property id
+ * @type integer
+ */
 		this.id = id;
+	}
+	
+/**
+ * Value used by pointshop 2 to determine the class of the item
+ *
+ * @property itemClass
+ * @type string
+ */
+	get itemClass( ){
+		return &#x27;KInventory.Items.&#x27; + this.id;
+	}
+	
+/**
+ * Value used by pointshop 2 to determine the purchase data of the item
+ *
+ * @property purchaseData
+ * @type string
+ */
+	get purchaseData( ){
+		return JSON.stringify({
+			purchaseData: {
+				amount: 0,
+				time: Math.floor( new Date().getTime() / 1000 ),
+				currency: &quot;points&quot;,
+				origin: &quot;SHOP&quot;
+			}
+		});
 	}
 	
 }
