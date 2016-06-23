@@ -1,9 +1,0 @@
-{
-	"name": "Pointshop 2 API",
-	"description": "Adding the ability to manage your Pointshop 2 data from the web",
-	"version": "1.0.0",
-	"url": "https://github.com/JamesxX/ps2api",
-	"options": {
-		"outdir": "./docs"
-	}
-}
