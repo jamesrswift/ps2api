@@ -195,7 +195,7 @@ class Connection{
 		
 		object.Connection.query(&#x27;SELECT * FROM libk_player&#x27;, function(err, rows, fields) {
 			if (err) {
-				this.onError(err);
+				object.onError(err);
 				return;
 			}
 			
@@ -204,10 +204,10 @@ class Connection{
 				object.Users[row.steam64] = new User(
 					row.player,
 					row.name,
-					row.uid
+					row.uid,
 					row.steam64,
-					row.id
-					this
+					row.id,
+					object
 				);
 			}
 			
@@ -227,7 +227,7 @@ class Connection{
 		
 		object.Connection.query(&#x27;SELECT * FROM ps2_itempersistence&#x27;, function(err, rows, fields) {
 			if (err) {
-				this.onError(err);
+				object.onError(err);
 				return;
 			}
 			
