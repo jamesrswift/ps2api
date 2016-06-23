@@ -1,6 +1,6 @@
 {
   "name": "ps2api",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A simple API for Pointshop 2",
   "main": "index.js",
   "scripts": {

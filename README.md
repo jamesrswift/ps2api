@@ -14,6 +14,14 @@ npm install ps2api --save
 
 ```js
 var psapi = require('p2sapi');
+
+var Pointshop = new psapi.Connection( '0.0.0.0', 'root', '', 'pointshop_stuff' );
+Pointshop.Event.on('connected', function( obj ){
+	obj.getUser(123456789).giveItem('MyAwesomeItem');
+});
+Pointshop.Event.on('error', function(error){
+	console.log( error );
+});
 ```
 
 ## Tests
