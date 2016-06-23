@@ -8,6 +8,13 @@
  
 "use strict";
 
+
+/**
+ * Node JS interface for pointshop 2 data 
+ * in a MySQL database
+ *
+ * @module ps2api
+ */
 module.exports = {
 	Connection: require("./lib/connection.js"),
 	User: require("./lib/user.js"),

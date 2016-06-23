@@ -1,0 +1,284 @@
+{
+    "project": {
+        "name": "Pointshop 2 API",
+        "description": "Adding the ability to manage your Pointshop 2 data from the web",
+        "version": "1.0.0",
+        "url": "https://github.com/JamesxX/ps2api"
+    },
+    "files": {
+        "lib\\Connection.js": {
+            "name": "lib\\Connection.js",
+            "modules": {
+                "ps2api": 1,
+                "ps2api-connection": 1
+            },
+            "classes": {
+                "Connection": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib\\Event.js": {
+            "name": "lib\\Event.js",
+            "modules": {
+                "ps2api-event": 1
+            },
+            "classes": {
+                "Event": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib\\Item.js": {
+            "name": "lib\\Item.js",
+            "modules": {
+                "ps2api-item": 1
+            },
+            "classes": {
+                "Item": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib\\User.js": {
+            "name": "lib\\User.js",
+            "modules": {
+                "ps2api-user": 1
+            },
+            "classes": {
+                "User": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "index.js": {
+            "name": "index.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "ps2api": {
+            "name": "ps2api",
+            "submodules": {
+                "ps2api-connection": 1,
+                "ps2api-event": 1,
+                "ps2api-item": 1,
+                "ps2api-user": 1
+            },
+            "elements": {},
+            "classes": {
+                "Connection": 1,
+                "Event": 1,
+                "Item": 1,
+                "User": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "file": "lib\\User.js",
+            "line": 19,
+            "description": "Adds the connection capability to the module",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "ps2api-connection": {
+            "name": "ps2api-connection",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "Connection": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "ps2api",
+            "namespace": "",
+            "file": "lib\\Connection.js",
+            "line": 21,
+            "description": "Adds the connection capability to the module",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "ps2api-event": {
+            "name": "ps2api-event",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "Event": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "ps2api",
+            "namespace": "",
+            "file": "lib\\Event.js",
+            "line": 21,
+            "description": "Adds the event emitter to the module",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "ps2api-item": {
+            "name": "ps2api-item",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "Item": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "ps2api",
+            "namespace": "",
+            "file": "lib\\Item.js",
+            "line": 19,
+            "description": "Adds the item structure to the module",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "ps2api-user": {
+            "name": "ps2api-user",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "User": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "ps2api",
+            "namespace": "",
+            "file": "lib\\User.js",
+            "line": 19,
+            "description": "Adds the user class to the module",
+            "tag": "main",
+            "itemtype": "main"
+        }
+    },
+    "classes": {
+        "Connection": {
+            "name": "Connection",
+            "shortname": "Connection",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ps2api",
+            "submodule": "ps2api-connection",
+            "namespace": "",
+            "file": "lib\\Connection.js",
+            "line": 21,
+            "description": "A utility that manages the connection between\nNode JS and the MySQL database",
+            "is_constructor": 1
+        },
+        "Event": {
+            "name": "Event",
+            "shortname": "Event",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ps2api",
+            "submodule": "ps2api-event",
+            "namespace": "",
+            "file": "lib\\Event.js",
+            "line": 21,
+            "description": "An Event emitter used by the connection\nclass",
+            "is_constructor": 1
+        },
+        "Item": {
+            "name": "Item",
+            "shortname": "Item",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ps2api",
+            "submodule": "ps2api-item",
+            "namespace": "",
+            "file": "lib\\Item.js",
+            "line": 19,
+            "description": "A structure for containing information\npertaining to pointshop items",
+            "is_constructor": 1
+        },
+        "User": {
+            "name": "User",
+            "shortname": "User",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ps2api",
+            "submodule": "ps2api-user",
+            "namespace": "",
+            "file": "lib\\User.js",
+            "line": 19,
+            "description": "A class for performing actions on a\nuser basis for pointshop 2",
+            "is_constructor": 1
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "lib\\Connection.js",
+            "line": 1,
+            "description": "PS2API\nhttps://github.com/JamesxX/ps2api\n\nCopyright (c) 2016 James R Swift\nLicensed under the GNU GPLv3 license.",
+            "class": "Connection"
+        },
+        {
+            "file": "lib\\Event.js",
+            "line": 1,
+            "description": "PS2API\nhttps://github.com/JamesxX/ps2api\n\nCopyright (c) 2016 James R Swift\nLicensed under the GNU GPLv3 license.",
+            "class": "Event",
+            "module": "ps2api"
+        },
+        {
+            "file": "lib\\Item.js",
+            "line": 1,
+            "description": "PS2API\nhttps://github.com/JamesxX/ps2api\n\nCopyright (c) 2016 James R Swift\nLicensed under the GNU GPLv3 license.",
+            "class": "Item",
+            "module": "ps2api"
+        },
+        {
+            "file": "lib\\User.js",
+            "line": 1,
+            "description": "PS2API\nhttps://github.com/JamesxX/ps2api\n\nCopyright (c) 2016 James R Swift\nLicensed under the GNU GPLv3 license.",
+            "class": "User",
+            "module": "ps2api"
+        },
+        {
+            "file": "index.js",
+            "line": 1,
+            "description": "PS2API\nhttps://github.com/JamesxX/ps2api\n\nCopyright (c) 2016 James R Swift\nLicensed under the GNU GPLv3 license.",
+            "class": "",
+            "module": "ps2api"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nPS2API\nhttps://github.com/JamesxX/ps2api\n\nCopyright (c) 2016 James R Swift\nLicensed under the GNU GPLv3 license.",
+            "line": " lib\\Connection.js:1"
+        },
+        {
+            "message": "Missing item type\nPS2API\nhttps://github.com/JamesxX/ps2api\n\nCopyright (c) 2016 James R Swift\nLicensed under the GNU GPLv3 license.",
+            "line": " lib\\Event.js:1"
+        },
+        {
+            "message": "Missing item type\nPS2API\nhttps://github.com/JamesxX/ps2api\n\nCopyright (c) 2016 James R Swift\nLicensed under the GNU GPLv3 license.",
+            "line": " lib\\Item.js:1"
+        },
+        {
+            "message": "Missing item type\nPS2API\nhttps://github.com/JamesxX/ps2api\n\nCopyright (c) 2016 James R Swift\nLicensed under the GNU GPLv3 license.",
+            "line": " lib\\User.js:1"
+        },
+        {
+            "message": "Missing item type\nPS2API\nhttps://github.com/JamesxX/ps2api\n\nCopyright (c) 2016 James R Swift\nLicensed under the GNU GPLv3 license.",
+            "line": " index.js:1"
+        }
+    ]
+}
