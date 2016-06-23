@@ -96,7 +96,7 @@
             "module": "ps2api",
             "namespace": "",
             "file": "lib\\Connection.js",
-            "line": 21,
+            "line": 23,
             "description": "Adds the connection capability to the module",
             "tag": "main",
             "itemtype": "main"
@@ -169,7 +169,7 @@
             "submodule": "ps2api-connection",
             "namespace": "",
             "file": "lib\\Connection.js",
-            "line": 21,
+            "line": 23,
             "description": "A utility that manages the connection between\nNode JS and the MySQL database",
             "is_constructor": 1,
             "params": [
@@ -225,7 +225,24 @@
             "file": "lib\\Item.js",
             "line": 19,
             "description": "A structure for containing information\npertaining to pointshop items",
-            "is_constructor": 1
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "Name",
+                    "description": "Name of the item",
+                    "type": "String"
+                },
+                {
+                    "name": "Description",
+                    "description": "Description of the item",
+                    "type": "String"
+                },
+                {
+                    "name": "ID",
+                    "description": "ID for the item",
+                    "type": "Integer"
+                }
+            ]
         },
         "User": {
             "name": "User",
@@ -241,7 +258,39 @@
             "file": "lib\\User.js",
             "line": 19,
             "description": "A class for performing actions on a\nuser basis for pointshop 2",
-            "is_constructor": 1
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "Player",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "Name",
+                    "description": "Name of the User",
+                    "type": "String"
+                },
+                {
+                    "name": "UniqueID",
+                    "description": "UniqueID of the User",
+                    "type": "Integer"
+                },
+                {
+                    "name": "Steam64",
+                    "description": "64 bit representation of the User's SteamID",
+                    "type": "Integer"
+                },
+                {
+                    "name": "InventoryID",
+                    "description": "ID for the associated inventory of the User",
+                    "type": "Integer"
+                },
+                {
+                    "name": "Parent",
+                    "description": "The Connection class this user is from.",
+                    "type": "Connection"
+                }
+            ]
         }
     },
     "elements": {},
@@ -254,7 +303,7 @@
         },
         {
             "file": "lib\\Connection.js",
-            "line": 37,
+            "line": 39,
             "description": "The Event Manager for the Connection class",
             "itemtype": "property",
             "name": "Event",
@@ -265,7 +314,7 @@
         },
         {
             "file": "lib\\Connection.js",
-            "line": 47,
+            "line": 49,
             "description": "The MySQL connection used by the connection class",
             "itemtype": "property",
             "name": "Connection",
@@ -276,7 +325,17 @@
         },
         {
             "file": "lib\\Connection.js",
-            "line": 65,
+            "line": 66,
+            "description": "Fired when the connection class connects to the database",
+            "itemtype": "event",
+            "name": "connected",
+            "class": "Connection",
+            "module": "ps2api",
+            "submodule": "ps2api-connection"
+        },
+        {
+            "file": "lib\\Connection.js",
+            "line": 78,
             "description": "Manages errors thrown by the connection",
             "itemtype": "method",
             "name": "onError",
@@ -289,7 +348,7 @@
         },
         {
             "file": "lib\\Connection.js",
-            "line": 72,
+            "line": 85,
             "description": "Fired when the connection fails",
             "itemtype": "event",
             "name": "error",
@@ -306,7 +365,7 @@
         },
         {
             "file": "lib\\Connection.js",
-            "line": 83,
+            "line": 96,
             "description": "Loads the users from the database",
             "itemtype": "method",
             "name": "loadUsers",
@@ -326,10 +385,20 @@
         },
         {
             "file": "lib\\Connection.js",
-            "line": 110,
-            "description": "Fired when the connection class connects to the database",
-            "itemtype": "event",
-            "name": "connected",
+            "line": 128,
+            "description": "Loads the items from the database",
+            "itemtype": "method",
+            "name": "loadItems",
+            "params": [
+                {
+                    "name": "Callback",
+                    "description": "Called when query has finished",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": ""
+            },
             "class": "Connection",
             "module": "ps2api",
             "submodule": "ps2api-connection"
