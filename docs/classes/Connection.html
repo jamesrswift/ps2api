@@ -109,7 +109,22 @@ Node JS and the MySQL database</p>
 <div id="method_Connection" class="method item">
     <h3 class="name"><code>Connection</code></h3>
 
-        <span class="paren">()</span>
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>IP</code>
+                </li>
+                <li class="arg">
+                        <code>User</code>
+                </li>
+                <li class="arg">
+                        <code>Password</code>
+                </li>
+                <li class="arg">
+                        <code>Database</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
 
 
 
@@ -132,6 +147,56 @@ Node JS and the MySQL database</p>
         
     </div>
 
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">IP</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>The IP address of the MySQL database</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">User</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>The username to connect to the MyQL database</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">Password</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>The password associated with the username provided</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">Database</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>The name of the database with the data from pointshop</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
 
 
 
@@ -142,20 +207,297 @@ Node JS and the MySQL database</p>
     <ul class="api-class-tabs">
         <li class="api-class-tab index"><a href="#index">Index</a></li>
 
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+            <li class="api-class-tab events"><a href="#events">Events</a></li>
     </ul>
 
     <div>
         <div id="index" class="api-class-tabpanel index">
             <h2 class="off-left">Item Index</h2>
 
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                            <li class="index-item method">
+                                <a href="#method_loadUsers">loadUsers</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_onError">onError</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties">
+                            <li class="index-item property">
+                                <a href="#property_Connection">Connection</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_Event">Event</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+                <div class="index-section events">
+                    <h3>Events</h3>
+
+                    <ul class="index-list events">
+                            <li class="index-item event">
+                                <a href="#event_connected">connected</a>
+
+                            </li>
+                            <li class="index-item event">
+                                <a href="#event_error">error</a>
+
+                            </li>
+                    </ul>
+                </div>
+        </div>
+
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method_loadUsers" class="method item">
+    <h3 class="name"><code>loadUsers</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>Callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
 
 
 
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/lib_Connection.js.html#l83"><code>lib\Connection.js:83</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Loads the users from the database</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">Callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>Called when query has finished</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+            </div>
         </div>
 
 
+</div>
+<div id="method_onError" class="method item">
+    <h3 class="name"><code>onError</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
 
 
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/lib_Connection.js.html#l65"><code>lib\Connection.js:65</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Manages errors thrown by the connection</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+            </div>
+        </div>
+
+
+</div>
+            </div>
+
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+<div id="property_Connection" class="property item">
+    <h3 class="name"><code>Connection</code></h3>
+    <span class="type">MySQLConnection</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/lib_Connection.js.html#l47"><code>lib\Connection.js:47</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The MySQL connection used by the connection class</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_Event" class="property item">
+    <h3 class="name"><code>Event</code></h3>
+    <span class="type">EventManager</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/lib_Connection.js.html#l37"><code>lib\Connection.js:37</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The Event Manager for the Connection class</p>
+
+    </div>
+
+
+
+</div>
+            </div>
+
+
+            <div id="events" class="api-class-tabpanel">
+                <h2 class="off-left">Events</h2>
+
+                    <div id="event_connected" class="events item">
+                        <h3 class="name"><code>connected</code></h3>
+                        <span class="type"></span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/lib_Connection.js.html#l110"><code>lib\Connection.js:110</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Fired when the connection class connects to the database</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="event_error" class="events item">
+                        <h3 class="name"><code>error</code></h3>
+                        <span class="type"></span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/lib_Connection.js.html#l72"><code>lib\Connection.js:72</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Fired when the connection fails</p>
+                    
+                        </div>
+                    
+                            <div class="params">
+                                <h4>Event Payload:</h4>
+                    
+                                <ul class="params-list">
+                                    <li class="param">
+                                            <code class="param-name">Error</code>
+                                            <span class="type">String</span>
+                    
+                    
+                                        <div class="param-description">
+                                            <p>The message from the MySQL connection</p>
+                    
+                                        </div>
+                    
+                                    </li>
+                                </ul>
+                            </div>
+                    
+                    
+                    </div>
+            </div>
     </div>
 </div>
                     </div>

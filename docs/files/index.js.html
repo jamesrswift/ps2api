@@ -98,7 +98,6 @@
  
 &quot;use strict&quot;;
 
-
 /**
  * Node JS interface for pointshop 2 data 
  * in a MySQL database
@@ -106,8 +105,29 @@
  * @module ps2api
  */
 module.exports = {
+	
+/**
+ * The Connection class used connect and retrieve data
+ *
+ * @property Connection
+ * @type Connection
+ */	
 	Connection: require(&quot;./lib/connection.js&quot;),
+	
+/**
+ * The User class used to do actions on a per user basis
+ *
+ * @property User
+ * @type User
+ */	
 	User: require(&quot;./lib/user.js&quot;),
+	
+/**
+ * The Item structure used internally to store item data
+ *
+ * @property Item
+ * @type Item
+ */	
 	Item: require(&quot;./lib/item.js&quot;),
 };
     </pre>

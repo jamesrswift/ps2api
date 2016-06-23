@@ -171,7 +171,29 @@
             "file": "lib\\Connection.js",
             "line": 21,
             "description": "A utility that manages the connection between\nNode JS and the MySQL database",
-            "is_constructor": 1
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "IP",
+                    "description": "The IP address of the MySQL database",
+                    "type": "String"
+                },
+                {
+                    "name": "User",
+                    "description": "The username to connect to the MyQL database",
+                    "type": "String"
+                },
+                {
+                    "name": "Password",
+                    "description": "The password associated with the username provided",
+                    "type": "String"
+                },
+                {
+                    "name": "Database",
+                    "description": "The name of the database with the data from pointshop",
+                    "type": "String"
+                }
+            ]
         },
         "Event": {
             "name": "Event",
@@ -231,6 +253,88 @@
             "class": "Connection"
         },
         {
+            "file": "lib\\Connection.js",
+            "line": 37,
+            "description": "The Event Manager for the Connection class",
+            "itemtype": "property",
+            "name": "Event",
+            "type": "EventManager",
+            "class": "Connection",
+            "module": "ps2api",
+            "submodule": "ps2api-connection"
+        },
+        {
+            "file": "lib\\Connection.js",
+            "line": 47,
+            "description": "The MySQL connection used by the connection class",
+            "itemtype": "property",
+            "name": "Connection",
+            "type": "MySQLConnection",
+            "class": "Connection",
+            "module": "ps2api",
+            "submodule": "ps2api-connection"
+        },
+        {
+            "file": "lib\\Connection.js",
+            "line": 65,
+            "description": "Manages errors thrown by the connection",
+            "itemtype": "method",
+            "name": "onError",
+            "return": {
+                "description": ""
+            },
+            "class": "Connection",
+            "module": "ps2api",
+            "submodule": "ps2api-connection"
+        },
+        {
+            "file": "lib\\Connection.js",
+            "line": 72,
+            "description": "Fired when the connection fails",
+            "itemtype": "event",
+            "name": "error",
+            "params": [
+                {
+                    "name": "Error",
+                    "description": "The message from the MySQL connection",
+                    "type": "String"
+                }
+            ],
+            "class": "Connection",
+            "module": "ps2api",
+            "submodule": "ps2api-connection"
+        },
+        {
+            "file": "lib\\Connection.js",
+            "line": 83,
+            "description": "Loads the users from the database",
+            "itemtype": "method",
+            "name": "loadUsers",
+            "params": [
+                {
+                    "name": "Callback",
+                    "description": "Called when query has finished",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Connection",
+            "module": "ps2api",
+            "submodule": "ps2api-connection"
+        },
+        {
+            "file": "lib\\Connection.js",
+            "line": 110,
+            "description": "Fired when the connection class connects to the database",
+            "itemtype": "event",
+            "name": "connected",
+            "class": "Connection",
+            "module": "ps2api",
+            "submodule": "ps2api-connection"
+        },
+        {
             "file": "lib\\Event.js",
             "line": 1,
             "description": "PS2API\nhttps://github.com/JamesxX/ps2api\n\nCopyright (c) 2016 James R Swift\nLicensed under the GNU GPLv3 license.",
@@ -255,6 +359,36 @@
             "file": "index.js",
             "line": 1,
             "description": "PS2API\nhttps://github.com/JamesxX/ps2api\n\nCopyright (c) 2016 James R Swift\nLicensed under the GNU GPLv3 license.",
+            "class": "",
+            "module": "ps2api"
+        },
+        {
+            "file": "index.js",
+            "line": 19,
+            "description": "The Connection class used connect and retrieve data",
+            "itemtype": "property",
+            "name": "Connection",
+            "type": "Connection",
+            "class": "",
+            "module": "ps2api"
+        },
+        {
+            "file": "index.js",
+            "line": 27,
+            "description": "The User class used to do actions on a per user basis",
+            "itemtype": "property",
+            "name": "User",
+            "type": "User",
+            "class": "",
+            "module": "ps2api"
+        },
+        {
+            "file": "index.js",
+            "line": 35,
+            "description": "The Item structure used internally to store item data",
+            "itemtype": "property",
+            "name": "Item",
+            "type": "Item",
             "class": "",
             "module": "ps2api"
         }
